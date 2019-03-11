@@ -1,0 +1,9 @@
+重点写出第二点信息收集：  
+信息收集的方法：  
+建议：在效果相差不大的情况下，就一直用相同的工具即可  
+其实个人在测试时，基本不会进行什么信息方面的收集，都是想到什么试什么，所以趁着这次学习，系统做几次  
+个人选择这个站作为检测目标：http://www.xxx.com.tw/。注：只做信息方面的收集工作  
+以Freebuf的一篇与自己以前的一篇为基础进行扩展：  
+参考链接：  
+http://47.106.140.244/2018/05/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B8%B8%E5%B9%B4%E6%9B%B4%E6%96%B0/  
+https://mp.weixin.qq.com/s?__biz=MjM5NjA0NjgyMA==&mid=2651073650&idx=2&sn=dead7dc5c21feac7f04876ac4df2a91c&chksm=bd1fbef98a6837efee8d597e8001d688a6de56c478cfe5abeb8ce01939f138d99c052b390dcf&xtrack=1&scene=0&subscene=131&clicktime=1552278233&ascene=7&devicetype=android-24&version=2700033b&nettype=ctnet&abtest_cookie=BAABAAoACwASABMABQAklx4AVpkeAMaZHgDWmR4A3JkeAAAA&lang=zh_CN&pass_ticket=hLcWBEl2bCgTrAEDfPrB8YGAOnydnF2DWb7y9GOJtEiHPFhmS1ArMIgMnYSNpYIL&wx_header=1  
