@@ -26,7 +26,7 @@ def list_file(dir_name):
             print(file)
             re_README(file)
 
-dir_name="D:\pycharm-project\security-skill-study"
+dir_name=os.path.dir_name(__file__)
 list_file(dir_name)
 
 
