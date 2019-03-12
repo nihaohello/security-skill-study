@@ -26,7 +26,8 @@ def list_file(dir_name):
             print(file)
             re_README(file)
 
-dir_name=os.path.dir_name(__file__)
+dir_name=os.path.dirname(__file__)
+print(dir_name)
 list_file(dir_name)
 
 
