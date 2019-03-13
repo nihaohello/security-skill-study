@@ -10,9 +10,6 @@ https://www.freebuf.com/articles/web/155145.html   不错
   
   
   
-  
-  
-  
 跨站请求伪造’和‘未经验证的重定向和转发  
 owasp 13年  
 1.injection  
@@ -45,3 +42,56 @@ owasp 17年
   
 推荐靶机平台bwapp  
 参考：http://www.youknowi.xin/?s=bwapp  
+  
+  
+.  
+├── Broken AccessControl  
+│   └── README.md  
+├── Broken Authentication  
+│   └── README.md  
+├── Cross-SiteScripting  
+│   ├── 作者如何利用xss漏洞shua盒子rank的.pdf  
+│   ├── README.md  
+│   ├── xss基础攻击与防御.pdf  
+│   └── xss+csrf.pdf  
+├── Injection  
+│   ├── 反序列化注入  
+│   │   └── README.md  
+│   ├── 框架注入  
+│   │   └── README.md  
+│   ├── 命令注入  
+│   │   └── README.md  
+│   ├── 数据库注入  
+│   │   ├── 数据库注入的类似点  
+│   │   │   ├── 报错注入.pdf  
+│   │   │   ├── 个人以前学习关于mysql注入的随笔.zip  
+│   │   │   ├── 联合注入.pdf  
+│   │   │   ├── 时间盲注.pdf  
+│   │   │   ├── bool盲注.pdf  
+│   │   │   └── README.md  
+│   │   ├── access注入.pdf  
+│   │   ├── mysql注入.pdf  
+│   │   ├── oracle注入.pdf  
+│   │   ├── README.md  
+│   │   ├── sqlite注入.pdf  
+│   │   └── sql_server注入.pdf  
+│   ├── 组件注入  
+│   │   └── README.md  
+│   └── README.md  
+├── Insecure Deserialization  
+│   ├── Java反序列化漏洞.pdf  
+│   ├── Java反序列化漏洞poc进阶.docx  
+│   ├── php反序列化漏洞.pdf  
+│   └── README.md  
+├── README.md  
+├── Security Misconfiguration  
+│   └── README.md  
+├── Sensitive DataExposure  
+│   └── README.md  
+├── UsingComponents with Known Vulnerabilities  
+│   └── README.md  
+└── XML ExternalEntities  
+├── README.md  
+├── xml基础以及攻击防御.pdf  
+└── xxe攻击.pdf  
+  
