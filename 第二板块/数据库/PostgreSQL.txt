@@ -1,3 +1,12 @@
+参考：
+http://www.cnblogs.com/xuchunlin/p/5615203.html  常用 "\"操作
+https://www.cnblogs.com/xxfcz/p/6483892.html
+https://blog.csdn.net/linlzk/article/details/79005337
+https://blog.csdn.net/u014057054/article/details/71155606
+https://blog.csdn.net/azhegps/article/details/52788800（PostgreSQL 允许远程访问设置方法）
+
+
+
 安装：
 kali下直接apt-get install postgresql
 安装后只能本地连接，所以安全暂不要担心
