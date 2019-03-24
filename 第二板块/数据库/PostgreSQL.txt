@@ -1,1 +1,40 @@
+安装：
+kali下直接apt-get install postgresql
+安装后只能本地连接，所以安全暂不要担心
+
+su - postgres   #切换到postgres用户
+psql   #进入postgres
+psql -d [databasename] #可登录其他数据库
+
+
+一.类似sql语句语法，仅简单记录一笔
+创建数据库
+postgres=# create database testdb1;
+CREATE DATABASE
+删除数据库
+postgres=# drop database testdb1
+postgres-# ;
+DROP DATABASE
+
+
+创建表：
+postgres=# create table table1(id int,name character(100));
+CREATE TABLE
+删除表
+drop table table1;
+
+
+
+PostgreSQL模式(架构)
+CREATE SCHEMA schema_name;
+
+
+
+二.连接
+三.高级
+
+
+
+
+
 
