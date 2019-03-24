@@ -1,0 +1,10 @@
+kali安装：apt-get install sqlite3
+
+创建数据库：
+sqlite3 testDB.db
+删除数据库：
+直接删除文件吧
+
+
+参考：http://www.runoob.com/sqlite/sqlite-insert.html
+
