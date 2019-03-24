@@ -1,0 +1,217 @@
+个人感觉目前只需掌握mysql mssql oracle
+还有了解redis，mongodb
+
+
+
+本内容全部来自下面链接：
+https://zhuanlan.zhihu.com/p/35003675
+https://www.cnblogs.com/atwanli/archive/2013/04/16/3024662.html
+https://www.jianshu.com/p/df6c00bbcb78
+https://vivus.iteye.com/blog/1750981
+http://www.kokojia.com/article/26329.html
+http://www.kokojia.com/article/26329.html
+https://www.jb51.net/article/79237.htm
+
+
+
+1.oracle
+比较笨重,一个用户可以操作多个数据库
+
+Oracle数据库产品具有以下优良特性。
+(1)兼容性
+Oracle产品采用标准SQL，并经过美国国家标准技术所(NIST)测试。与IBM SQL/DS、DB2、INGRES、IDMS/R等兼容。
+(2)可移植性
+Oracle的产品可运行于很宽范围的硬件与操作系统平台上。可以安装在70种以上不同的大、中、小型机上;可在VMS、DOS、UNIX、Windows等多种操作系统下工作。
+(3)可联结性
+Oracle能与多种通讯网络相连，支持各种协议(TCP/IP、DECnet、LU6.2等)。
+(4)高生产率
+Oracle产品提供了多种开发工具，能极大地方便用户进行进一步的开发。
+(5)开放性
+支持所有主流平台运行
+完全支持所有工业标准
+采用完全开放策略
+对开发商全力支持
+获得最高认证级别的ISO标准安全认证
+性能最高,保持开放平台下TPC-D和TPC-C的世界记录
+多层次网络计算
+提供GUI和命令行
+完全向下兼容，完全没有风险
+对硬件要求高
+
+客户端支持及应用模式：Oracle 多层次网络计算支持多种工业标准用ODBC、JDBC、OCI等网络客户连接 。
+使用风险：Oracle长时间开发经完全向下兼容的广泛应用且风险低 。
+
+
+缺点：
+对硬件的要求很高。
+价格比较昂贵。
+管理维护麻烦一些。
+操作比较复杂，需要技术含量较高。
+
+
+
+
+
+
+2.mysql:比较轻巧,多个用户可以操作一个数据库
+MySQL是最受欢迎的开源SQL数据库管理系统，它由MySQL
+AB开发、发布和支持。MySQL
+AB是一家基于MySQL开发人员的商业公司，它是一家使用了一种成功的商业模式来结合开源价值和方法论的第二代开源公司。MySQL是MySQL
+AB的注册商标。
+MySQL是一个快速的、多线程、多用户和健壮的SQL数据库服务器。MySQL服务器支持关键任务、重负载生产系统的使用，也可以将它嵌入到一个大配置(mass- deployed)的软件中去。
+与其他数据库管理系统相比，MySQL具有以下优势：
+(1)MySQL是一个关系数据库管理系统。
+(2)MySQL是开源的。
+(3)MySQL服务器是一个快速的、可靠的和易于使用的数据库服务器。
+(4)MySQL服务器工作在客户/服务器或嵌入系统中。
+(5)有大量的MySQL软件可以使用。
+
+
+windows，unix/linux平台
+体积很小
+开源数据库
+响应速度快
+面向中小企业
+真正的多用户多任务的数据库
+占用系统资源很少
+标准版免费
+主要结合php开发
+对于海量数据有点力不从心
+
+开源的关系型数据库小型关联式数据库管理系统MySQL是一个快速的、多线程、多用户和健壮的SQL数据库服务器。特点1.其体积小；2.总体拥有成本低；3.开放源码；4.可运行在Windows平台和大多数的Linux平台上；5.快速，轻量级，易于扩展，免费，跨平台；6.可以同时处理几乎不限数量的用户；7.处理多达50,000,000以上的记录；8.命令执行速度快，也许是现今最快的；9.简单有效的用户特权系统。优点1.使用C和C++编写，并使用了多种编译器进行测试，保证源代码的可移植性；2.支持AIX、FreeBSD、HP-UX、Linux、Mac OS、NovellNetware、OpenBSD、OS/2 Wrap、Solaris、Windows等多种操作系统；3.为多种编程语言提供了API。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等；4.支持多线程，充分利用CPU资源；5.价格便宜：Mysql是开源的，所以不需要支付额外的费用；6.MySQL使用标准的SQL数据语言形式；7.Mysql对PHP有很好的支持，PHP是目前最流行的Web开发语言。缺点1.比较难学；2.MySQL也缺乏一些存储程序的功能；3.使用缺省的ip端口，但是有时候这些ip也会被一些黑客闯入；4.使用myisam配置，如果你不慎损坏数据库，结果可能会导致所有的数据丢失。使用场景广泛地应用在Internet上的中小型网站中LAMP（Linux+Apache+Mysql+Php）mysql的优势在于免费，如果业务系统数据库不是极其庞大，可用mysql
+优点：
+体积小、速度快、总体拥有成本低，开源、支持多种操作系统。
+是开源数据库，提供的接口支持多种语言连接操作。
+MySql的核心程序采用完全的多线程编程。线程是轻量级的进程，它可以灵活地为用户提供服务，而不过多的系统资源。用多线程和C语言实现的MySql能很容易充分利用CPU。
+MySql有一个非常灵活而且安全的权限和口令系统。当客户与MySql服务器连接时，他们之间所有的口令传送被加密，而且MySql支持主机认证。
+支持ODBC for Windows， 支持所有的ODBC 2.5函数和其他许多函数， 可以用Access连接MySql服务器， 使得应用被扩展。
+支持大型的数据库， 可以方便地支持上千万条记录的数据库。作为一个开放源代码的数据库，可以针对不同的应用进行相应的修改。
+拥有一个非常快速而且稳定的基于线程的内存分配系统，可以持续使用面不必担心其稳定性。
+MySQL同时提供高度多样性，能够提供很多不同的使用者介面，包括命令行客户端操作，网页浏览器，以及各式各样的程序语言介面，例如C+，Perl，Java，PHP，以及Python。你可以使用事先包装好的客户端，或者干脆自己写一个合适的应用程序。MySQL可用于Unix，Windows，以及OS/2等平台，因此它可以用在个人电脑或者是服务器上。
+缺点：
+
+
+不支持热备份。
+MySQL最大的缺点是其安全系统，主要是复杂而非标准，另外只有到调用mysqladmin来重读用户权限时才发生改变。
+没有一种存储过程(Stored Procedure)语言，这是对习惯于企业级数据库的程序员的最大限制。
+MySQL的价格随平台和安装方式变化。Linux的MySQL如果由用户自己或系统管理员而不是第三方安装则是免费的，第三方案则必须付许可费。Unix或Linux 自行安装 免费 、Unix或Linux 第三方安装收费。
+
+
+
+
+3.mongodb(nosql):数据以文件的形式存储,不支持事务,数据海量
+4.redis(nosql):数据以key-value的形式存储,支持事务比较弱,数据量小
+5.neo4j(nosql):图形数据库,数据存储在网络上而不是表中
+6.mssql
+SQL Server是由微软开发的数据库管理系统，是Web上最流行的用于存储数据的数据库，它已广泛用于电子商务、银行、保险、电力等与数据库有关的行业。
+目前最新版本是SQL Server 2005，它只能在Windows上运行，操作系统的系统稳定性对数据库十分重要。并行实施和共存模型并不成熟，很难处理日益增多的用户数和数据卷，伸缩性有限。
+SQL Server 提供了众多的Web和电子商务功能，如对XML和Internet标准的丰富支持，通过Web对数据进行轻松安全的访问，具有强大的、灵活的、基于Web的和安全的应用程序管理等。而且，由于其易操作性及其友好的操作界面，深受广大用户的喜爱。
+
+windows平台
+体积较大
+占用资源
+支持命令和图形化
+主要结合asp开发
+收费软件
+微软sql server
+
+真正的客户机/服务器体系结构。在这种体系结构中，包括多台计算机，其中处理应用程序，请求服务的计算机称客户机，处理数据库的计算机称为服务器。优势1.安全性和可用性高；2.超快的性能；3.企业安全性；4.快速的数据发现；5.方便易用；6.高效的数据压缩功能；7.集成的开发环境。缺点1.开放性。只能运行在微软的windows平台，没有丝毫的开放性可言；2.可伸缩性，并行性。并行实施和共存模型并不成熟，很难处理日益增多的用户数和数据卷，伸缩性有限；3.性能稳定性。SQLServer当用户连接多时性能会变的很差，并且不够稳定；4.使用风险。SQLServer完全重写的代码，经历了长期的测试，不断延迟，许多功能需时间来证明。并不十分兼容早期产品。使用需要冒一定风险；5.客户端支持及应用模式。只支持C/S模式；6.安全性。Oracle的安全认证获得最高认证级别的ISO标准认证，而SQL Server并没有获得什么安全认证。使用场景主机操作系统为window，主要用于web网站的建设，承载中小型web后台数据。在租赁的虚拟主机中一般会预安装SQL Server作为数据库软件。
+
+
+优点：
+
+易用性、适合分布式组织的可伸缩性、用于决策支持的数据仓库功能、与许多其他服务器软件紧密关联的集成性、良好的性价比等。
+为数据管理与分析带来了灵活性，允许单位在快速变化的环境中从容响应，从而获得竞争优势。从数据管理和分析角度看，将原始数据转化为商业智能和充分利用Web带来的机会非常重要。
+作为一个完备的数据库和数据分析包，SQLServer为快速开发新一代企业级商业应用程序、为企业赢得核心竞争优势打开了胜利之门。
+作为重要的基准测试可伸缩性和速度奖的记录保持者，SQLServer是一个具备完全Web支持的数据库产品，提供了对可扩展标记语言 (XML)的核心支持以及在Internet上和防火墙外进行查询的能力。
+缺点：
+
+开放性 ：SQL Server 只能windows上运行没有丝毫开放性操作系统系统稳定对数据库十分重要Windows9X系列产品偏重于桌面应用NT server只适合小型企业而且windows平台靠性安全性和伸缩性非常有限象unix样久经考验尤其处理大数据库。
+伸缩性并行性 ：SQL server 并行实施和共存模型并成熟难处理日益增多用户数和数据卷伸缩性有限。
+安全性：没有获得任何安全证书。
+性能 ：SQL Server 多用户时性能不佳 。
+客户端支持及应用模式： 只支持C/S模式，SQL Server C/S结构只支持windows客户用ADO、DAO、OLEDB、ODBC连接。
+使用风险：SQL server 完全重写代码经历了长期测试断延迟许多功能需要时间来证明并十分兼容。
+
+
+
+
+
+7.Sybase
+1984年，Mark
+B. Hiffman和Robert
+Epstern创建了Sybase公司，并在1987年推出了Sybase数据库产品。Sybase主要有三种版本：一是UNIX操作系统下运行的版本;二是Novell
+Netware环境下运行的版本;三是Windows NT环境下运行的版本。对UNIX操作系统，目前应用最广泛的是SYBASE
+10及SYABSE 11 for SCO UNIX。
+
+
+Sybase数据库的特点：
+(1)它是基于客户/服务器体系结构的数据库。
+(2)它是真正开放的数据库。
+(3)它是一种高性能的数据库。
+
+UNIX或WindowsNT、Dump 和Load平台
+可以与非Sybase数据源及服务器集成，允许在多个数据库之间复制数据
+具有较好的数据安全性
+在我国大中型系统中具有广泛的应用，尤其金融企业
+基于客户机/服务器体系结构
+它是一种真正意义上的高性能的数据库
+单进程多线程的引擎结构
+
+
+
+
+8.DB2
+DB2是内嵌于IBM的AS/400系统上的数据库管理系统，直接由硬件支持。它支持标准的SQL语言，具有与异种数据库相连的GATEWAY。因此它具有速度快、可靠性好的优点。但是，只有硬件平台选择了IBM的AS/400，才能选择使用DB2数据库管理系统。
+DB2能在所有主流平台上运行(包括Windows)，最适于海量数据。
+DB2在企业级的应用最为广泛，在全球的500家最大的企业中，几乎85%以上都用DB2数据库服务器，而国内到1997年约占5%。
+除此之外，还有微软的
+
+Access数据库、FoxPro数据库等。既然现在有这么多的数据库系统，那么在游戏编程时应该选择什么样的数据库呢?首要的原则就是根据实际需要，另一方面还要考虑游戏开发预算。现在常用的数据库有：SQL
+Server、My
+SQL、Oracle、FoxPro。其中MySQL是一个完全免费的数据库系统，其功能也具备了标准数据库的功能，因此，在独立制作时，建议使用。
+Oracle虽然功能强劲，但它毕竟是为商业用途而存在的，目前很少在游戏中使用到
+
+
+
+所有主流平台运行
+最适于海量数据
+在企业级的应用最为广泛
+全球最大的500家企业中占85%
+具有很好的并行性。多节点，数据库分区
+性能最高，保持开放平台下TPC-D和TPC-C的世界记录
+适用于数据仓库和在线事物处理
+提供GUI和命令行
+在巨型企业得到广泛的应用，向下兼容性好。风险小
+
+优点1.能在所有主流平台上运行（包括windows）。最适于海量数据；2.具有很好的并行性。DB2把数据库管理扩充到了并行的、多节点的环境；3.获得最高认证级别的ISO标准认证；4.客户端支持及应用模式；5.跨平台，多层结构，支持ODBC，JDBC等客户；6.操作简单，同时提供GUI和命令行，在windowsNT和unix下操作相同。缺点1.在巨型企业得到广泛的应用，向下兼容性好。风险小。使用场景性能较高适用于数据仓库和在线事物处理。DB2 超大型数据库，与ORACLE类似 ，数据仓库和数据挖掘相当的不错，特别是集群技术可以使DB2的可扩性能达到极致。
+
+
+
+
+
+9.ACCESS
+ACCESS是小型数据库、桌面数据库。容易操作，使用广，成本低。优点1.存储方式单一；2.界面友好、易操作。缺点1.网站访问频繁，经常达到100人左右的在线的时候性能就会急剧下降；2.记录数过多，一般记录数达到10万条左右的时候性能就会急剧下降；3.数据储存量小安全性不够高，加了用户级密码容易破解；4.Microsoft Access数据库有一定的极限，如果数据达到100M左右，很容易造成服务器iis假死，或者消耗掉服务器的内存导致服务器崩溃。使用场景适合数据量少的应用，在处理少量数据和单机访问的数据库时是很好的，效率也很高。
+
+
+
+
+
+
+
+
+postgresql	sqlite	sqlserver	sybase	db2	mysql	openbase	oracle
+binary	bytea	blob	image	image	blob(32768)	blob	object	blob
+boolean	boolean	boolean	bit	bit	decimal(1)	tinyint(1)	boolean	number(1)
+date	date	date	datetime	datetime	date	date	date	date
+datetime	timestamp	datetime	datetime	datetime	timestamp	datetime	datetime	date
+decimal	decimal	decimal	decimal	decimal	decimal	decimal	decimal	decimal
+float	float	float	float(8)	float(8)	float	float	float	number
+integer	integer	integer	int	int	int	int(11)	integer	number(38)
+string	(note 1)	varchar(255)	varchar(255)	varchar(255)	varchar(255)	varchar(255)	char(4096)	varchar2(255)
+text	text	text	text	text	clob(32768)	text	text	clob
+time	time	datetime	datetime	time	time	time	time	date
+timestamp	timestamp	datetime	datetime	timestamp	timestamp	datetime	timestamp	date
+
+
+
