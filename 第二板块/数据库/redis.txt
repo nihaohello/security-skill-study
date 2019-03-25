@@ -5,7 +5,7 @@ kali安装：apt-get install redis
 
 1.redis-cli即可连接上：
 root@kali:~# redis-cli
-127.0.0.1:6379>
+127.0.0.1:6379> 
 
 2.设置键对：
 127.0.0.1:6379> set 1 2
