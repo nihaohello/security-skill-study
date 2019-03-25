@@ -1,0 +1,107 @@
+参考菜鸟教程：http://www.runoob.com/redis/redis-security.html
+kali安装：apt-get install redis
+启动服务：service redis-server start
+默认只能本地连接
+
+1.redis-cli即可连接上：
+root@kali:~# redis-cli
+127.0.0.1:6379>
+
+2.设置键对：
+127.0.0.1:6379> set 1 2
+OK
+127.0.0.1:6379> get 1
+"2"
+127.0.0.1:6379>
+
+
+
+
+3.hash参考：https://www.cnblogs.com/guangye/p/7441936.html
+127.0.0.1:6379> HSET myhash name test
+(integer) 1
+127.0.0.1:6379> HGETALL myhash
+1) "name"
+2) "test"
+127.0.0.1:6379> HVALS myhash
+1) "test"
+
+
+
+4.list操作
+相当于栈结构的操作，参考：https://www.cnblogs.com/wanzaixiaoxin/p/4934117.html
+127.0.0.1:6379>  lpush plist ch0 ch1 ch2
+(integer) 3
+127.0.0.1:6379> lpushx plist ch5 ch6
+(integer) 5
+127.0.0.1:6379> lrange plist 0 5
+1) "ch6"
+2) "ch5"
+3) "ch2"
+4) "ch1"
+5) "ch0"
+
+
+
+5.set操作（集合）
+127.0.0.1:6379> SADD set1 1,2,3
+(integer) 1
+127.0.0.1:6379> SMEMBERS set1
+1) "1,2,3"
+
+
+
+
+6.Redis HyperLogLog 是用来做基数统计的算法
+
+
+
+
+
+7.Redis 发布订阅（极有意思的点）
+参考：http://baijiahao.baidu.com/s?id=1599698596196012325&wfr=spider&for=pc
+发布订阅：
+127.0.0.1:6379>  SUBSCRIBE redisChat
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "redisChat"
+3) (integer) 1
+重开客户端发布消息：
+127.0.0.1:6379> PUBLISH redisChat "Redis is a great caching technique"
+(integer) 1
+订阅端接受到：
+127.0.0.1:6379>  SUBSCRIBE redisChat
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "redisChat"
+3) (integer) 1
+1) "message"
+2) "redisChat"
+3) "Redis is a great caching technique"
+
+
+
+
+
+9.redis事物：
+以菜鸟教程例子：
+ 以下是一个事务的例子， 它先以 MULTI 开始一个事务， 然后将多个命令入队到事务中， 最后由 EXEC 命令触发事务， 一并执行事务中的所有命令：
+redis 127.0.0.1:6379> MULTI
+OK
+redis 127.0.0.1:6379> SET book-name "Mastering C++ in 21 days"
+QUEUED
+redis 127.0.0.1:6379> GET book-name
+QUEUED
+redis 127.0.0.1:6379> SADD tag "C++" "Programming" "Mastering Series"
+QUEUED
+redis 127.0.0.1:6379> SMEMBERS tag
+QUEUED
+redis 127.0.0.1:6379> EXEC
+
+
+
+10.redis脚本，Redis 脚本使用 Lua 解释器来执行脚本。
+11.redis连接
+12.redis服务器
+
+
