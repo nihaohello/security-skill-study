@@ -1,0 +1,71 @@
+大体参考：http://www.runoob.com/mongodb/mongodb-databases-documents-collections.html
+
+
+
+本机kali没有配置相应apt库
+手动安装：
+参考：
+https://blog.csdn.net/qq_37933685/article/details/80697828
+http://www.runoob.com/mongodb/mongodb-linux-install.html
+https://blog.csdn.net/weixin_36667844/article/details/66968125（按着这个做，一步到底，没有一点问题）
+下载：
+wget https://repo.mongodb.org/apt/debian/dists/jessie/mongodb-org/4.0/main/binary-amd64/mongodb-org-server_4.0.6_amd64.deb
+
+
+cd /usr/local/mongodb/bin
+ ./mongod --dbpath=/usr/local/mongodb/data/db/ --logpath=/usr/local/mongodb/logs/mongodb.log --fork
+./mongo
+即可登入shell界面，web界面还没有测试成功
+
+
+
+
+
+
+创建数据库：
+> use test
+switched to db test
+> db
+test
+> db.test.insert({"1":"3"})
+WriteResult({ "nInserted" : 1 })
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+>
+
+
+
+删除数据库：
+> db.dropDatabase()
+{ "dropped" : "test", "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+
+
+
+
+删除集合：
+db.collection.drop()
+
+
+
+
+创建集合：
+> use test
+switched to db test
+> db.createCollection("runoob")
+{ "ok" : 1 }
+>  show collections
+runoob
+
+
+
+备份：mongorestore
+监控：mongostat
+
