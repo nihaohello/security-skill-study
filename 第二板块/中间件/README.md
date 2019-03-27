@@ -46,6 +46,7 @@ https://blog.csdn.net/fly_hps/article/details/80781925（web服务器与中间�
 3.弱口令  
 （五） jBoss  
 1、反序列化漏洞  
+http://www.youknowi.xin/?s=jboss  
 2、war 后门文件部署  
 （六） WebLogic  
 1、反序列化漏洞  
@@ -54,7 +55,10 @@ https://blog.csdn.net/fly_hps/article/details/80781925（web服务器与中间�
 4、war 后门文件部署  
 （七）其它中间件相关漏洞  
 1、FastCGI 未授权访问、任意命令执行  
-2、PHPCGI 远程代码执行  
-  
-  
+2、PHPCGI 远程代码执行（此漏洞影响 php-5.3.12 以前的版本，mod 方式、fpm 方式不受影响）  
+(八)struts2  
+也是一个比较多漏洞的点  
+命令执行  
+（九）spring  
+反序列化命令执行  
   
